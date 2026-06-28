@@ -1,0 +1,18 @@
+@layer components {
+  .text-input {
+    @apply border-b border-stone-300 p-5;
+
+    &::placeholder {
+      @apply text-dark-stone;
+    }
+
+    &:focus {
+      @apply border-dark-stone;
+      outline: none;
+    }
+
+    &:focus::placeholder {
+      @apply text-dark-stone/50;
+    }
+  }
+}

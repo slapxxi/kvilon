@@ -1,0 +1,13 @@
+@layer components {
+  .btn {
+    @apply inline-grid grid-cols-[1fr_2fr_1fr] grid-rows-[1fr_2fr_1fr] rounded-full bg-olive text-black cursor-pointer;
+
+    &:hover {
+      @apply bg-olive/80;
+    }
+
+    & > * {
+      @apply col-2 row-2;
+    }
+  }
+}
