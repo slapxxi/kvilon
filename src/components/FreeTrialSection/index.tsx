@@ -6,8 +6,8 @@ import config from './config'
 export const FreeTrialSection = () => {
   return (
     <div className="col-2 my-8 grid grid-cols-[1.2fr_minmax(10px,60px)_1fr]">
-      <div className="grid grid-cols-[1fr_100px] grid-rows-[28px_1fr]">
-        <div className="col-1 row-2 z-10 ml-8 font-semibold leading-[120%]">
+      <div className="grid grid-cols-[1fr_100px] grid-rows-[28px_1fr] self-center">
+        <div className="z-10 col-1 row-2 ml-8 leading-[120%] font-semibold">
           <h3 className="font-title text-6xl">Try Kvilon</h3>
           <h4 className="font-title text-6xl text-bronze">Free for 14 days</h4>
         </div>
@@ -15,7 +15,7 @@ export const FreeTrialSection = () => {
         <FreeTrial className="row-2 size-50 justify-self-end" />
       </div>
 
-      <div className="grid gap-4 place-self-center col-3 max-w-3xl">
+      <div className="col-3 grid max-w-3xl gap-4 place-self-center">
         <div className="text-2xl">
           Your demo account is ready — pre-filled with real marine insurance
           data. No setup, no IT department, no commitment
