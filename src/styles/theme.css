@@ -1,13 +1,26 @@
 @theme {
   --color-olive: #cdef99;
+
+  --color-darklime: #cdef99;
   --color-darklime-200: #b3cc8d;
+
   --color-bronze: #af9061;
   --color-bronze-400: #a29890;
   --color-bronze-600: #56514d;
   --color-bronze-700: #3f3a36;
+
   --color-dark-stone: #23201e;
 
   --font-title: 'DM Sans', sans-serif;
   --font-text: 'Manrope', sans-serif;
   --font-extra: 'Montserrat', sans-serif;
+
+  --animate-enter: enter 1200ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
+
+  @keyframes enter {
+    from {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+  }
 }

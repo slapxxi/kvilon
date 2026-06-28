@@ -1,9 +1,9 @@
 @layer components {
   .btn {
-    @apply inline-grid grid-cols-[1fr_2fr_1fr] grid-rows-[1fr_2fr_1fr] rounded-full bg-olive text-black cursor-pointer;
+    @apply inline-grid grid-cols-[1fr_2fr_1fr] grid-rows-[1fr_2fr_1fr] rounded-full bg-darklime text-black cursor-pointer;
 
     &:hover {
-      @apply bg-olive/80;
+      @apply bg-darklime/80;
     }
 
     & > * {
@@ -16,6 +16,14 @@
 
     &:hover {
       @apply bg-white/80;
+    }
+  }
+
+  .btn-inverted {
+    @apply bg-dark-stone text-white;
+
+    &:hover {
+      @apply bg-dark-stone/80;
     }
   }
 

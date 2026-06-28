@@ -1,6 +1,6 @@
 import ChevronRight from '~/assets/chevron-right.svg?react'
 import Logo from '~/assets/kvilon-logo.svg?react'
-import { FreeTrialSection, Header } from '~/components'
+import { HeroSection, FreeTrialSection, Header } from '~/components'
 import config from '~/config'
 import './App.css'
 
@@ -8,6 +8,8 @@ const App = () => {
   return (
     <div className="grid min-h-screen grid-cols-[minmax(0,1fr)_minmax(auto,1780px)_minmax(0,1fr)] grid-rows-[auto_1fr] gap-x-4 bg-neutral-100">
       <Header />
+
+      <HeroSection />
 
       <div className="col-span-full my-2 flex gap-4 overflow-hidden border-t border-b border-stone-300 p-4 text-dark-stone/95">
         <div className="translate flex min-w-max gap-4">
