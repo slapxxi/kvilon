@@ -1,4 +1,35 @@
-const config = {
+import MessageIcon from '~/assets/message.svg?react'
+import GridIcon from '~/assets/grid.svg?react'
+import EyeIcon from '~/assets/eye.svg?react'
+
+type Config = {
+  text: {
+    trial: string
+    trialExtra: string
+    terms: string
+    request: string
+    touch: string
+    match: string
+  }
+  ticker: {
+    text: string
+    Icon: any
+  }[]
+  nav: string[]
+  footerSections: {
+    title: string
+    links: string[]
+  }[]
+}
+
+const config: Config = {
+  ticker: [
+    { text: 'Centralized Communication', Icon: MessageIcon },
+    { text: 'Built-in policy builder', Icon: GridIcon },
+    { text: 'AI-powered assistants', Icon: EyeIcon },
+    { text: 'No complex setup', Icon: MessageIcon },
+    { text: 'No IT department required', Icon: GridIcon },
+  ],
   text: {
     trial: 'Free Trial',
     trialExtra: '14-day free trial —  included with any plan',
