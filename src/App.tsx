@@ -1,32 +1,16 @@
 import ChevronRight from '~/assets/chevron-right.svg?react'
 import Logo from '~/assets/kvilon-logo.svg?react'
 import config from '~/config'
+import { useScrollThreshold } from '~/hooks'
 import './App.css'
-import { useEffect, useState } from 'react'
 
 const App = () => {
-  const [scroll, setScroll] = useState(false)
-
-  useEffect(() => {
-    function handler() {
-      const scrollTop = window.scrollY
-      if (scrollTop > 48) {
-        setScroll(true)
-      } else {
-        setScroll(false)
-      }
-    }
-    window.addEventListener('scroll', handler)
-
-    return () => {
-      window.removeEventListener('scroll', handler)
-    }
-  }, [])
+  const isScrolling = useScrollThreshold()
 
   return (
     <div className="grid min-h-screen grid-cols-[minmax(0,1fr)_minmax(auto,1780px)_minmax(0,1fr)] grid-rows-[auto_1fr] gap-x-4 bg-neutral-100">
       <header
-        className={`${scroll ? 'bg-dark-stone/85' : 'bg-dark-stone'} sticky top-2 z-10 col-2 
+        className={`${isScrolling ? 'bg-dark-stone/85' : 'bg-dark-stone'} sticky top-2 z-10 col-2 
           my-2 flex items-center justify-between rounded-full bg-dark-stone p-4 px-6 text-white backdrop-blur-md transition-colors duration-700`}
       >
         <Logo className="w-40" />
