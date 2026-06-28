@@ -13,6 +13,10 @@
 
   .btn-secondary {
     @apply bg-white;
+
+    &:hover {
+      @apply bg-white/80;
+    }
   }
 
   .btn-outline {

@@ -1,3 +1,4 @@
+import ChevronRight from '~/assets/chevron-right.svg?react'
 import Logo from '~/assets/kvilon-logo.svg?react'
 import config from '~/config'
 import './App.css'
@@ -53,7 +54,7 @@ const App = () => {
           <span>{config.text.request}</span>
         </button>
 
-        <div className="col-2 row-3 self-end justify-self-center text-sm">
+        <div className="col-2 row-3 self-end ml-8 text-sm">
           <label className="inline-flex items-center gap-2 text-stone-400">
             <input type="radio" />
             <span>{config.text.terms}</span>
@@ -66,7 +67,7 @@ const App = () => {
       </section>
 
       <footer className="col-span-full grid grid-cols-subgrid rounded-t-[80px] bg-dark-stone text-white">
-        <div className="col-2 grid grid-cols-2 grid-rows-[80px_auto_80px]">
+        <div className="col-2 grid grid-cols-2 grid-rows-[80px_auto_minmax(120px,auto)_80px]">
           <div className="row-2 mr-12 grid grid-cols-[auto_minmax(10px,80px)_auto] gap-y-12">
             <Logo className="w-108 max-w-full self-center" />
             <div className="col-3 grid gap-2">
@@ -85,23 +86,29 @@ const App = () => {
 
             <div className="col-3 flex gap-2 self-start">
               <button className="btn btn-secondary">
-                <span>LinkedIn</span>
+                <span className="inline-flex gap-2 items-center">
+                  <span>LinkedIn</span>
+                  <ChevronRight className="text-darklime-200 size-4"></ChevronRight>
+                </span>
               </button>
               <button className="btn btn-secondary">
-                <span>Telegram</span>
+                <span className="inline-flex gap-2 items-center">
+                  <span>Telegram</span>
+                  <ChevronRight className="text-darklime-200 size-4"></ChevronRight>
+                </span>
               </button>
-            </div>
-
-            <div className="col-span-full row-4 flex text-sm justify-between text-bronze-600">
-              <div>&copy; 2025 kvilon. All rights reserved.</div>
-              <div>Privacy PolicyTerms of Use</div>
-              <div>Designed &amp; developed by me</div>
             </div>
           </div>
 
-          <div className="col-2 row-span-3 grid grid-cols-3 grid-rows-subgrid">
+          <div className="col-1 mr-12 row-3 flex text-sm self-end justify-between text-bronze-600">
+            <div>&copy; 2025 kvilon. All rights reserved.</div>
+            <div>Privacy PolicyTerms of Use</div>
+            <div>Designed &amp; developed by me</div>
+          </div>
+
+          <div className="col-2 row-[1/-1] grid grid-cols-3 grid-rows-subgrid">
             {config.footerSections.map((section) => (
-              <section className="row-span-3 grid grid-rows-subgrid justify-items-center border-l border-bronze-700 last:border-r">
+              <section className="row-span-full grid grid-rows-subgrid justify-items-center border-l border-bronze-700 last:border-r">
                 <div className="row-2 grid content-start gap-7">
                   <h3 className="text-2xl font-bold">{section.title}</h3>
                   <ul className="grid gap-5">
