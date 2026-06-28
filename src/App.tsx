@@ -1,45 +1,13 @@
-import CheckmarkIcon from '~/assets/checkmark.svg?react'
-import cardImage from '~/assets/card.png'
 import ChevronRight from '~/assets/chevron-right.svg?react'
-import FreeTrial from '~/assets/free-trial.svg?react'
 import Logo from '~/assets/kvilon-logo.svg?react'
+import { FreeTrialSection, Header } from '~/components'
 import config from '~/config'
-import { useScrollThreshold } from '~/hooks'
 import './App.css'
 
 const App = () => {
-  const isScrolling = useScrollThreshold()
-
   return (
     <div className="grid min-h-screen grid-cols-[minmax(0,1fr)_minmax(auto,1780px)_minmax(0,1fr)] grid-rows-[auto_1fr] gap-x-4 bg-neutral-100">
-      <header
-        className={`${isScrolling ? 'bg-dark-stone/85' : 'bg-dark-stone'} sticky top-2 z-20 col-2 
-          my-2 flex items-center justify-between rounded-full bg-dark-stone p-4 px-6 text-white backdrop-blur-md transition-colors duration-700`}
-      >
-        <Logo className="w-40" />
-
-        <nav className="font-extra">
-          <ul className="flex gap-12">
-            {config.nav.map((item) => (
-              <li
-                key={item}
-                className="border-b border-transparent hover:border-b-lime-200"
-              >
-                <a href="#">{item}</a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        <div className="flex gap-4">
-          <button className="btn btn-outline">
-            <span className="col-2 row-2">Eng</span>
-          </button>
-          <button className="btn">
-            <span className="col-2 row-2">{config.text.trial}</span>
-          </button>
-        </div>
-      </header>
+      <Header />
 
       <div className="col-span-full my-2 flex gap-4 overflow-hidden border-t border-b border-stone-300 p-4 text-dark-stone/95">
         <div className="translate flex min-w-max gap-4">
@@ -55,39 +23,7 @@ const App = () => {
         </div>
       </div>
 
-      <div className="col-[1/-2] my-8 grid grid-cols-[1.2fr_minmax(10px,60px)_1fr]">
-        <div className="grid grid-cols-[1fr_100px] grid-rows-[28px_1fr]">
-          <div className="col-1 row-2 z-10 ml-8 font-semibold leading-[120%]">
-            <h3 className="font-title text-6xl">Try Kvilon</h3>
-            <h4 className="font-title text-6xl text-bronze">
-              Free for 14 days
-            </h4>
-          </div>
-          <img src={cardImage} alt="" className="col-1 row-span-full w-full" />
-          <FreeTrial className="row-2 size-50 justify-self-end" />
-        </div>
-
-        <div className="grid gap-4 place-self-center col-3 max-w-3xl">
-          <div className="text-2xl">
-            Your demo account is ready — pre-filled with real marine insurance
-            data. No setup, no IT department, no commitment
-          </div>
-          <ul className="grid min-h-[40vh] content-center gap-12">
-            {config.demoFeatures.map((item) => (
-              <li
-                key={item}
-                className="flex items-center gap-2 font-title text-4xl"
-              >
-                <CheckmarkIcon className="size-4" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-          <button className="btn justify-self-start">
-            <span>Start Free Trial</span>
-          </button>
-        </div>
-      </div>
+      <FreeTrialSection />
 
       <section
         className="col-2 my-8 grid grid-cols-[minmax(0,1.4fr)_minmax(0,3.3fr)_minmax(0,1fr)] 
