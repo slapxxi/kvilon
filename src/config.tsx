@@ -3,6 +3,7 @@ import GridIcon from '~/assets/grid.svg?react'
 import EyeIcon from '~/assets/eye.svg?react'
 
 type Config = {
+  demoFeatures: string[]
   text: {
     trial: string
     trialExtra: string
@@ -23,6 +24,11 @@ type Config = {
 }
 
 const config: Config = {
+  demoFeatures: [
+    'Ready in minutes, not weeks',
+    'Real data, real workflows',
+    'No credit card required',
+  ],
   ticker: [
     { text: 'Centralized Communication', Icon: MessageIcon },
     { text: 'Built-in policy builder', Icon: GridIcon },
