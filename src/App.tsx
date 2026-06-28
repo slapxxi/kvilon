@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div className="grid min-h-screen grid-cols-[minmax(0,1fr)_minmax(auto,1780px)_minmax(0,1fr)] grid-rows-[auto_1fr] gap-x-4 bg-neutral-100">
       <header
-        className={`${isScrolling ? 'bg-dark-stone/85' : 'bg-dark-stone'} sticky top-2 z-10 col-2 
+        className={`${isScrolling ? 'bg-dark-stone/85' : 'bg-dark-stone'} sticky top-2 z-20 col-2 
           my-2 flex items-center justify-between rounded-full bg-dark-stone p-4 px-6 text-white backdrop-blur-md transition-colors duration-700`}
       >
         <Logo className="w-40" />
