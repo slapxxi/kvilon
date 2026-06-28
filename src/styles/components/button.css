@@ -12,6 +12,10 @@
   }
 
   .btn-secondary {
+    @apply bg-white;
+  }
+
+  .btn-outline {
     @apply bg-transparent text-bronze-400 border border-bronze-400;
 
     &:hover {

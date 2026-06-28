@@ -1,24 +1,6 @@
 import Logo from '~/assets/kvilon-logo.svg?react'
+import config from '~/config'
 import './App.css'
-
-const config = {
-  text: {
-    trial: 'Free Trial',
-    terms: `By clicking the button, you agree to our Privacy Policy and consent to the processing of your personal data`,
-    request: 'Send request',
-    touch: `Get in touch`,
-    match: `We'll match a plan to your team and volume`,
-  },
-  nav: ['Features', 'How-it-works', 'Pricing', 'About', 'Contacts'],
-  footerSections: [
-    { title: 'Home', links: [] },
-    {
-      title: 'Product',
-      links: ['Features', 'How-it-works', 'Pricing', 'Free Trial'],
-    },
-    { title: 'Company', links: ['About Us'] },
-  ],
-}
 
 const App = () => {
   return (
@@ -40,7 +22,7 @@ const App = () => {
         </nav>
 
         <div className="flex gap-4">
-          <button className="btn btn-secondary">
+          <button className="btn btn-outline">
             <span className="col-2 row-2">Eng</span>
           </button>
           <button className="btn">
@@ -79,21 +61,47 @@ const App = () => {
         </div>
 
         <div className="col-3 row-3 text-right font-text text-2xl">
-          14-day free trial —  included with any plan
+          {config.text.trialExtra}
         </div>
       </section>
 
       <footer className="col-span-full grid grid-cols-subgrid rounded-t-[80px] bg-dark-stone text-white">
-        <div className="col-2 grid grid-cols-2 grid-rows-[minmax(40px,80px)_auto_80px]">
-          <div className="row-2">
-            <Logo className="w-108" />
-            <p className="text-2xl">
+        <div className="col-2 grid grid-cols-2 grid-rows-[80px_auto_80px]">
+          <div className="row-2 mr-12 grid grid-cols-[auto_minmax(10px,80px)_auto] gap-y-12">
+            <Logo className="w-108 max-w-full self-center" />
+            <div className="col-3 grid gap-2">
+              <h3 className="text-2xl font-bold">Contacts</h3>
+              <a
+                href="mailto:hello@kvilon.com"
+                className="font-title text-5xl font-light"
+              >
+                hello@kvilon.com
+              </a>
+            </div>
+
+            <p className="col-1 text-2xl">
               Policy management system for insurance professionals
             </p>
+
+            <div className="col-3 flex gap-2 self-start">
+              <button className="btn btn-secondary">
+                <span>LinkedIn</span>
+              </button>
+              <button className="btn btn-secondary">
+                <span>Telegram</span>
+              </button>
+            </div>
+
+            <div className="col-span-full row-4 flex text-sm justify-between text-bronze-600">
+              <div>&copy; 2025 kvilon. All rights reserved.</div>
+              <div>Privacy PolicyTerms of Use</div>
+              <div>Designed &amp; developed by me</div>
+            </div>
           </div>
+
           <div className="col-2 row-span-3 grid grid-cols-3 grid-rows-subgrid">
             {config.footerSections.map((section) => (
-              <section className="row-span-3 grid grid-rows-subgrid justify-items-center border-l last:border-r border-bronze-700">
+              <section className="row-span-3 grid grid-rows-subgrid justify-items-center border-l border-bronze-700 last:border-r">
                 <div className="row-2 grid content-start gap-7">
                   <h3 className="text-2xl font-bold">{section.title}</h3>
                   <ul className="grid gap-5">
