@@ -10,4 +10,12 @@
       @apply col-2 row-2;
     }
   }
+
+  .btn-secondary {
+    @apply bg-transparent text-bronze-400 border border-bronze-400;
+
+    &:hover {
+      @apply bg-bronze-400/20;
+    }
+  }
 }

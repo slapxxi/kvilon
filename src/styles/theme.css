@@ -1,8 +1,11 @@
 @theme {
   --color-olive: #cdef99;
   --color-bronze: #af9061;
+  --color-bronze-400: #a29890;
+  --color-bronze-700: #3f3a36;
   --color-dark-stone: #23201e;
 
-  --font-title: 'Manrope', sans-serif;
-  --font-text: 'DM Sans', sans-serif;
+  --font-title: 'DM Sans', sans-serif;
+  --font-text: 'Manrope', sans-serif;
+  --font-extra: 'Montserrat', sans-serif;
 }
