@@ -1,6 +1,7 @@
 import ChevronRight from '~/assets/chevron-right.svg?react'
 import Logo from '~/assets/kvilon-logo.svg?react'
 import {
+  AdvantagesSection,
   FreeTrialSection,
   Header,
   HeroSection,
@@ -16,8 +17,6 @@ const App = () => {
 
       <HeroSection />
 
-      <YourWorkdaySection />
-
       <div className="col-span-full my-2 flex gap-4 overflow-hidden border-t border-b border-stone-300 p-4 text-dark-stone/95">
         <div className="animate-translate flex min-w-max gap-4">
           {[...config.ticker, ...config.ticker].map((item, i) => (
@@ -31,6 +30,10 @@ const App = () => {
           ))}
         </div>
       </div>
+
+      <YourWorkdaySection />
+
+      <AdvantagesSection />
 
       <FreeTrialSection />
 

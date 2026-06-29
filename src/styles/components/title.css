@@ -1,0 +1,5 @@
+@layer components {
+  .title {
+    @apply font-title font-semibold;
+  }
+}
