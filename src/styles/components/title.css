@@ -1,5 +1,9 @@
 @layer components {
   .title {
     @apply font-title font-semibold;
+
+    & em {
+      @apply not-italic text-bronze;
+    }
   }
 }

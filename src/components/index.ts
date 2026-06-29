@@ -1,5 +1,6 @@
 export * from './Advantages'
 export * from './FreeTrialSection'
 export * from './Header'
+export * from './BuiltFor'
 export * from './Hero'
 export * from './YourWorkday'
