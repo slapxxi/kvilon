@@ -16,16 +16,26 @@ body {
   @apply bg-darklime-200 text-dark-stone;
 }
 
-.translate {
-  animation: translate-x 30s linear infinite;
-}
+.tile {
+  overflow: hidden;
+  position: relative;
+  background: url('./assets/bg.jpg') no-repeat;
+  background-size: 1200px 800px;
+  background-repeat: no-repeat repeat;
 
-@keyframes translate-x {
-  from {
-    transform: none;
+  > * {
+    @apply z-10;
   }
 
-  to {
-    transform: translateX(-50%);
+  &::before {
+    @apply absolute bottom-0 left-0 size-300 rounded-full bg-darklime-100 mix-blend-color blur-3xl;
+    content: '';
+    transform: translateY(60%) translateX(-60%);
+  }
+
+  &::after {
+    @apply absolute bottom-0 left-0 size-200 rounded-full bg-black/30 blur-3xl;
+    content: '';
+    transform: translateY(50%) translateX(-50%);
   }
 }

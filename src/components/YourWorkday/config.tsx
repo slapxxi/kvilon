@@ -7,7 +7,7 @@ type Config = {
   points: {
     title?: string
     text?: string
-    img?: string
+    img?: boolean
     Icon?: React.FC<any>
   }[]
 }
@@ -19,13 +19,13 @@ const config: Config = {
       text: `Manual data entry, broken formulas, uncontrolled file versions. Every mistake costs money and reputation`,
       Icon: CubeIcon,
     },
-    {},
+    { img: true },
     {
       title: `150 emails a day.  Zero shared context`,
       text: `Policy terms in one thread, documents  in another, approval history gone. Finding the right email takes longer than the work itself`,
       Icon: CubeIcon2,
     },
-    {},
+    { img: true },
     {
       title: `Client data here.  Documents there`,
       text: `No way to track what's been done`,

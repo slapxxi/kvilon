@@ -19,7 +19,7 @@ const App = () => {
       <YourWorkdaySection />
 
       <div className="col-span-full my-2 flex gap-4 overflow-hidden border-t border-b border-stone-300 p-4 text-dark-stone/95">
-        <div className="translate flex min-w-max gap-4">
+        <div className="animate-translate flex min-w-max gap-4">
           {[...config.ticker, ...config.ticker].map((item, i) => (
             <div
               className="flex items-center gap-2 px-4 text-center font-title text-4xl"
