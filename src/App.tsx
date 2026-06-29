@@ -76,9 +76,10 @@ const App = () => {
 
       <footer className="col-span-full grid grid-cols-subgrid overflow-hidden rounded-t-[80px] bg-dark-stone text-white">
         <div className="col-2 grid grid-cols-2 grid-rows-[80px_auto_minmax(120px,auto)_80px]">
-          <div className="row-2 mr-12 grid grid-cols-[auto_minmax(10px,80px)_auto] gap-y-12">
+          <div className="justify-items-center lg:justify-items-normal row-2 mr-12 grid lg:grid-cols-[auto_minmax(10px,80px)_auto] gap-y-12">
             <Logo className="w-108 max-w-full self-center" />
-            <div className="col-3 grid gap-2">
+
+            <div className="lg:col-3 grid gap-2">
               <h3 className="text-2xl font-bold">Contacts</h3>
               <a
                 href="mailto:hello@kvilon.com"
@@ -88,11 +89,11 @@ const App = () => {
               </a>
             </div>
 
-            <p className="col-1 text-2xl">
+            <p className="col-1 text-2xl text-center lg:text-left">
               Policy management system for insurance professionals
             </p>
 
-            <div className="col-3 flex gap-2 self-start">
+            <div className="lg:col-3 flex gap-2 self-start">
               <button className="btn btn-secondary">
                 <span className="inline-flex items-center gap-2">
                   <span>LinkedIn</span>
@@ -108,7 +109,7 @@ const App = () => {
             </div>
           </div>
 
-          <div className="col-1 row-3 mr-12 flex justify-between self-end text-sm text-bronze-600">
+          <div className="col-1 row-3 lg:mr-12 flex justify-between self-end text-sm text-bronze-600">
             <div>&copy; 2025 kvilon. All rights reserved.</div>
             <div>Privacy PolicyTerms of Use</div>
             <div>Designed &amp; developed by me</div>

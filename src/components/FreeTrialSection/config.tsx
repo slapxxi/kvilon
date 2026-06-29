@@ -1,7 +1,3 @@
-import MessageIcon from '~/assets/message.svg?react'
-import GridIcon from '~/assets/grid.svg?react'
-import EyeIcon from '~/assets/eye.svg?react'
-
 type Config = {
   demoFeatures: string[]
   text: {}

@@ -4,7 +4,7 @@ import { padNumber } from '~/lib'
 
 export const AdvantagesSection = () => {
   return (
-    <div className="col-span-full grid grid-cols-subgrid border-t border-b border-stone-300">
+    <div className="col-span-full my-20 grid grid-cols-subgrid border-t border-b border-stone-300">
       <div className="col-[2/-1] grid grid-cols-[minmax(auto,580px)_minmax(0,40px)_1fr] grid-rows-[40px_1fr] gap-8">
         <div className="row-2 grid grid-rows-[auto_50px_1fr] self-start">
           <h2 className="font-title text-5xl [&_em]:text-bronze [&_em]:not-italic">
@@ -20,7 +20,7 @@ export const AdvantagesSection = () => {
               className="group border-b border-stone-300 px-5 
               py-10 pr-10 transition-colors last:border-0 hover:bg-white"
             >
-              <div className="grid grid-cols-[minmax(auto,100px)_1fr] gap-4 transition-transform group-hover:translate-x-4">
+              <div className="grid max-w-[960px] grid-cols-[minmax(auto,100px)_1fr] gap-4 transition-transform group-hover:translate-x-4">
                 <div>
                   {padNumber(i + 1)}-
                   <span className="text-stone-400">
