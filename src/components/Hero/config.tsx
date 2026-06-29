@@ -1,6 +1,6 @@
 type Config = {
   text: {
-    [key: string]: string
+    [key: string]: any
   }
 }
 const config: Config = {

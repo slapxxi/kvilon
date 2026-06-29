@@ -1,6 +1,11 @@
 import ChevronRight from '~/assets/chevron-right.svg?react'
 import Logo from '~/assets/kvilon-logo.svg?react'
-import { HeroSection, FreeTrialSection, Header } from '~/components'
+import {
+  FreeTrialSection,
+  Header,
+  HeroSection,
+  YourWorkdaySection,
+} from '~/components'
 import config from '~/config'
 import './App.css'
 
@@ -10,6 +15,8 @@ const App = () => {
       <Header />
 
       <HeroSection />
+
+      <YourWorkdaySection />
 
       <div className="col-span-full my-2 flex gap-4 overflow-hidden border-t border-b border-stone-300 p-4 text-dark-stone/95">
         <div className="translate flex min-w-max gap-4">
