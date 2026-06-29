@@ -12,18 +12,16 @@ export const YourWorkdaySection = () => {
       {config.points.map((item) => (
         <div
           className={clsx(
-            'relative grid grid-cols-[auto_auto] gap-10 overflow-hidden rounded-2xl bg-white p-10',
+            'relative grid gap-y-10 gap-x-6 grid-cols-[1fr_auto] overflow-hidden rounded-2xl bg-white p-10 content-start',
             item.img && 'tile',
           )}
         >
           {item.title && (
             <h3 className="font-title text-3xl font-semibold">{item.title}</h3>
           )}
-          {item.Icon && (
-            <item.Icon className="justify-self-end text-stone-300" />
-          )}
+          {item.Icon && <item.Icon className="text-stone-300" />}
           {item.text && (
-            <p className="col-span-2 text-xl text-dark-stone">{item.text}</p>
+            <p className="col-span-full text-xl text-dark-stone">{item.text}</p>
           )}
         </div>
       ))}
