@@ -3,13 +3,13 @@ import CheckmarkIcon from '~/assets/checkmark.svg?react'
 
 export const PricingSection = () => {
   return (
-    <section className="col-2 grid gap-15 my-10">
+    <section className="col-2 my-10 grid gap-15">
       <h2 className="title text-5xl">{config.title}</h2>
 
-      <ul className="grid auto-rows-fr grid-cols-3 gap-5">
+      <ul className="grid grid-cols-3 gap-5">
         {config.list.map((item) => (
-          <li className="grid rounded-[40px] bg-white p-5 content-start">
-            <div className="grid grid-cols-[40px_1fr_40px] gap-y-7">
+          <li className="row-span-4 grid grid-rows-subgrid content-start rounded-[40px] bg-white p-5">
+            <div className="row-span-4 grid grid-cols-[40px_1fr_40px] grid-rows-subgrid gap-y-7">
               <div className="col-span-full grid grid-cols-subgrid content-between">
                 <img
                   src={item.img}
