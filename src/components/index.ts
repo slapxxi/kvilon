@@ -1,4 +1,5 @@
 export * from './Advantages'
+export * from './PricingSection'
 export * from './FreeTrialSection'
 export * from './Header'
 export * from './BuiltFor'

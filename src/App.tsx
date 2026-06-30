@@ -2,12 +2,13 @@ import ChevronRight from '~/assets/chevron-right.svg?react'
 import Logo from '~/assets/kvilon-logo.svg?react'
 import {
   AdvantagesSection,
+  BuiltByPeopleSection,
+  BuiltForSection,
   FreeTrialSection,
   Header,
-  BuiltForSection,
   HeroSection,
+  PricingSection,
   YourWorkdaySection,
-  BuiltByPeopleSection,
 } from '~/components'
 import config from '~/config'
 import './App.css'
@@ -42,6 +43,8 @@ const App = () => {
       <BuiltForSection />
 
       <BuiltByPeopleSection />
+
+      <PricingSection />
 
       <section
         className="col-2 my-8 grid grid-cols-[minmax(0,1.4fr)_minmax(0,3.3fr)_minmax(0,1fr)] 
