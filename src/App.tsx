@@ -7,6 +7,7 @@ import {
   BuiltForSection,
   HeroSection,
   YourWorkdaySection,
+  BuiltByPeopleSection,
 } from '~/components'
 import config from '~/config'
 import './App.css'
@@ -39,6 +40,8 @@ const App = () => {
       <FreeTrialSection />
 
       <BuiltForSection />
+
+      <BuiltByPeopleSection />
 
       <section
         className="col-2 my-8 grid grid-cols-[minmax(0,1.4fr)_minmax(0,3.3fr)_minmax(0,1fr)] 
